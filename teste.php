@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+	<title> Cabal The Last War</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="content-language" content="pt-br">
+		<link rel="shortcut icon" type="image/ico" href="favicon.png">
+		<link href="dist/css/style.css" rel="stylesheet">
+		<style>
+		*{
+			margin-top: -3px;
+			padding:0;
+			color:#aaa;
+			font-family:'Arial';
+			font-size: 32;
+		}
+		body{
+			
+			background-color: white;
+			background-position: 100% 100%;
+			background-size: 100% 91%;
+		}
+
+	.menu{
+		margin-top: -13px;
+		width:100%;
+		height:70px;
+		border-bottom: 1px solid #708090;
+	}
+		
+	.menu>ul{
+		list-style:none;	
+		position:relative;
+		margin-left:100px;
+		}
+	.menu ul li{
+		width:100px;
+		float:right;
+	}
+
+	.menu a{
+		padding-top:26px;
+		display:block;
+		text-decoration: none;
+		color:black;
+		background-color: white;
+		text-align:center;
+		height: 75px;
+		}
+	.menu ul ul{
+		list-style:none;
+		position:absolute;
+		visibility:hidden;		
+		}
+	.menu ul li:hover ul{
+		visibility:visible;
+		margin-top: 3px;	
+		
+	}
+		
+	.menu a:hover{
+		margin-top: -5px;
+		color: white;
+		height:76px;
+		}
+
+	.menu ul ul li{
+		float:none;
+		border-bottom: solid 1px #ccc;
+		}
+	.menu ul ul li a{
+		background-color:#069;
+		}
+	#bt_menu{
+		display: none;
+		}
+	label[for='bt_menu']{
+		padding:5px;
+		background-color:#222;
+		color:#fff;
+		font-family:'Arial';
+		text-align:center;
+		font-size:30px;
+		cursor:pointer;
+		display:none;
+		width:50px;
+		height:50px;
+		}	
+		label[for='bt_menu']:hover{
+			background-color:#f4f4f4;
+			color:#aaa;
+			}
+		@media (max-width: 900px) {
+		body{
+			margin: 0;
+			background:url(img/bkg1012.png) center no-repeat;
+			background-position: 100% 100%;
+			background-size: 100% 100%;
+		}
+		.menu{
+			margin-left:-100%;
+			transition:all .7s;
+			background-color: #222;
+			margin-top: -10px;
+			}
+		.login{
+			background-color: white;
+			margin-top: -20px;
+			padding-top:13px;
+			padding-left:40px;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			height:70px;
+		}
+		.esp{
+			border: 1px solid black;
+			border-radius: 10px;
+			text-align:center;
+			margin-left:10px;
+		}
+		.menu a{
+			background-color: white;
+		}
+		label[for='bt_menu']{
+			display:block;
+			width:100%;
+			height:50px;
+			}
+		.menu>ul{
+			margin-left:0;
+			}
+		
+		.menu ul li{
+			width:100%;
+			float:none;
+			}
+		.menu ul ul{
+			position:static;
+			overflow:hidden;
+			max-height:0;
+			transition:all .4s;
+			background-color: white;
+			}
+		.menu ul li:hover ul{
+			height:auto;
+			max-height:200px;
+			transition:all .4s;
+			}
+		#bt_menu:checked ~ .menu{
+			margin-left:0;
+			}
+			.logoP{
+				margin-left: -100%;
+			}
+			.logop1{
+			width:301px;
+			height:301px;
+			margin-left: -100%;
+			}	
+	}
+	.logoP{
+			width:301px;
+			height:301px;
+			position: absolute;
+			top: 10%;
+			left: 10%;
+			
+		}
+		.logop1{
+			width:301px;
+			height:301px;
+			position: absolute;
+			top: 3%;
+			left: 2%;
+		}
+		.alinha{
+			margin-left:2%;
+			margin-top:36%;
+		}
+
+
+		.containerCentral{
+			position: absolute;
+			top: 25%;
+			left: 25%;
+			height: 400px;
+			width: 800px;
+		}
+
+		.containerCentral .titulo{
+			margin: 0;
+		}
+
+		.containerCentral .linha{
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			align-items: center;
+		}
+		.containerCentral .linha .imgP{
+			width: 40%;
+			height: 200px;
+			background:url(img/bkg1012.png) center no-repeat;
+			background-size: cover;
+		}
+		.containerCentral .linha .textoP{
+			width: 60%;
+			height: 200px;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-start;
+			
+		}
+
+		.containerCentral .linha .textoP .subTitulo{
+			margin-top: 0;
+			width:100%;
+			
+			padding-top:10px;
+			padding-left: 20px;
+		}
+
+		.containerCentral .linha .textoP .subTitulo p{
+			font-size: 36px;
+			color: white;
+		}
+
+		.containerCentral .linha .textoP .resumoT p{
+			padding-left: 22px;
+			padding-top: 0px;
+			font-size: 18px;
+			color: white;
+		}
+
+		.containerCentral .titulo p{
+			font-size: 52px;
+			color: white;
+		}
+		.logoP{
+			width:301px;
+			height:301px;
+			position: absolute;
+			top: 10%;
+			left: -1.3%;
+			z-index: -1;
+			
+		}
+		.risco{
+			margin-top: 15px;
+			margin-bottom: 15px;
+			border-bottom: 2px solid white;
+		}
+		.logop1{
+			position: absolute;
+			top: 3%;
+			left: 2%;
+			
+		}
+		.vertical{
+			position: absolute;
+			margin-top:0.0%;
+			width:14vw;
+			height: 89.5vh;
+			background-color: #708090;
+			border-right: 1px solid black;
+			border-left: 1px solid black;
+            z-index: 1;
+		}
+		.coluna{
+			margin-top:15%;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: center;
+		}
+		.linha{
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			height: 50px;
+		}
+		.linha:hover{
+			
+			background-color:#1C1C1C;
+			width: 14vw;
+		}
+		.vertical a{
+			font-size: 18px;
+			color: white;
+		}
+		.nick{
+			padding-top:26px;
+			display:block;
+			text-decoration: none;
+			color:black;
+			background-color: white;
+			text-align:center;
+			height: 75px;
+		}
+		.caixao{
+			background-color: #D3D3D3;
+			position: absolute;
+			height: 89.5vh;
+			width: 100vw;
+
+		}
+	</style>
+	</head>
+    <body>
+<input type="checkbox" id="bt_menu">
+<label for="bt_menu">&#9776;</label>
+
+		<div class="logop1">
+			<a href="index.php"><img src="img/logop.png"  width="50"/></a>
+		</div>
+
+		<nav class="menu">
+			<ul>
+				<li><a href="Cadastro.php" ><button style="background-color: red; color: white; width: 50px; height: 30px; border: 1px solid white; border-radius: 10px;">Sair</button></a></li>
+			</ul>
+			<ul>
+				<li><div class="nick">Cash: 3000 </div></li>
+			</ul>
+			<ul>
+				<li><div class="nick">Player: joaocad </div></li>
+			</ul>
+		</nav>
+		<div class="caixao">
+		<div class="vertical">
+			<div class="coluna">
+				<div class="linha">
+					 <a href="Doacao.php">Doar</a>
+				</div>
+				<div class="linha">
+					 <a href="Doacao.php">Vip</a>
+				</div>
+				<div class="linha">
+					 <a href="Doacao.php">Perfil</a>
+				</div>
+			</div>
+		</div>
+		</div>
+    </body>
+</html>
